@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="hostname">
+    <span>@Model.Host</span>
+</div>
+<div class="row" style="background-color:black; min-height:100vh">
+    <div class="col s12 m6">
+        <div class="listtitle">
+            <span>Requests</span>
+        </div>
+        <div id="requestsList">
+        </div>
+    </div>
+    <div class="col s12 m6">
+        <div class="listtitle">
+            <span>Messages</span>
+        </div>
+        <div id="messagesList">
+        </div>
+    </div>
+    
+</div>
+
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/site.js"></script>

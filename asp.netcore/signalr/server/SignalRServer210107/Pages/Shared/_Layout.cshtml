@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignalR Server</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="~/css/site.css">
+
+</head>
+<body>
+
+    <div class="mainheader">
+     <img src="./images/srlogo.png" alt="" class="left circle responsive-img mainlogo" style="padding-left:20px">
+     <div>ASP.net Core SignalR</div>
+    </div>
+
+
+    <div class="mainfooter">
+        <span>Vijaya Sekhar Gullapalli, 2021</span>
+        <span></span>
+    </div>
+    <div class="renderbody">
+        @RenderBody()
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

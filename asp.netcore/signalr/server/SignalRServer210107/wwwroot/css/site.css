@@ -1,0 +1,100 @@
+﻿
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:300');
+
+.body {
+    background-color: #181819;
+}
+
+.mainheader {
+    background-color: #181819;
+    color: #EEE7E3;
+    font-family: Consolas,monaco,monospace;
+    font-size: 2em;
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    border: none;
+}
+.mainlogo{
+    height:100px;
+    width:100px;
+}
+.hostname {
+    background-color: #181819;
+    width: 100%;
+    color: cyan;
+    font-family: Consolas,monaco,monospace;
+    font-size: 1.2em;
+    padding: 10px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    text-align: center;
+    border: none;
+}
+.mainfooter {
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    min-height: 50px;   
+    background-color: #181819;    
+    color: #EEE7E3;
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 18px;    
+    padding: 20px;
+    z-index: 5;
+}
+.renderbody {
+    width: 100%;    
+    background-color:black;
+}
+#requestsList {
+    width: 100%;
+    /*min-height: 100vh;*/
+    padding-top: 10px;
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #EEE7E3;   
+    padding-bottom: 80px;
+}
+#messagesList {
+    width: 100%;
+    /*min-height: 100vh;*/
+    padding-top: 10px;
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #EEE7E3;    
+    padding-bottom: 80px;
+}
+.listtitle {
+    width: 100%;
+    font-family: Consolas,monaco,monospace;
+    font-size: 1em;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom:5px;
+    color:cyan;
+}
+.msgContainer {
+    width: 100%;
+    background-color: black;
+}
+.methodContainer {
+    font-family: Consolas,monaco,monospace;
+    font-size: 16px;
+    color: lawngreen;
+}
+.consoleTextContainer {
+    font-family: Consolas,monaco,monospace;
+    font-size: 15px;
+    color: white;
+}
+.consoleMessageContainer {
+    font-family: Consolas,monaco,monospace;
+    font-size: 13px;
+    color: white;
+}
