@@ -10,7 +10,7 @@ connection.start().then(function () {
 });
 
 document.getElementById("mainpanel").addEventListener("mousemove", function (event) {
-    var message =`X: ${event.clientX}, Mouse Y: ${event.clientY}`;
+    var message =`Mouse X: ${event.clientX}, Mouse Y: ${event.clientY}`;
     if(connectionSet){
         var user = "browserClient";    
     connection.invoke("SendMessage", user, message,true)

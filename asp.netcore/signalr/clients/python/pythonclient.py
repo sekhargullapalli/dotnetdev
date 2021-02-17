@@ -12,7 +12,10 @@ def ws_on_close(ws):
     print('#### Disconnected from SignalR server##')
 
 def ws_on_message(ws, message:str):
-    print(message)
+    ignore_list = ['{"type":6}', '{}']
+    for msg in message.split(chr(0x1E)):
+        if msg and msg not in ignore_list:
+            print(f"From server: {msg}")                  
 
 def encode_json(obj):    
     return json.dumps(obj) + chr(0x1E)
@@ -31,8 +34,11 @@ def ws_on_open(ws):
     # Handshake completed
     print("### Handshake request completed ###") 
 
+    #Sending a sample message
+    #https://github.com/dotnet/aspnetcore/blob/main/src/SignalR/docs/specs/HubProtocol.md
     ws.send(encode_json({
-        "type":1,        
+        "type":1,  
+        "invocationId ":"1234",      
         "target" : "SendMessage",
         "arguments" : ["PythonClient", "HelloWorld!", True ] 
         }))
