@@ -13,9 +13,10 @@ document.getElementById("mainpanel").addEventListener("mousemove", function (eve
     var message =`X: ${event.clientX}, Mouse Y: ${event.clientY}`;
     if(connectionSet){
         var user = "browserClient";    
-    connection.invoke("SendMessage", user, message,true).catch(function (err) {
-        return console.error(err.toString());
-    });
+    connection.invoke("SendMessage", user, message,true)
+               .catch(function (err) {
+                    return console.error(err.toString());
+                });
     document.getElementById("coordinates").innerHTML=message;
     event.preventDefault();
     }

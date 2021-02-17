@@ -6,6 +6,7 @@ namespace SignalRServer210107.Hubs
 {
     public class GenericHub:Hub 
     {
+        
         public async Task SendMessage(string user, string message, bool logatserver)
         {
             if(logatserver)
