@@ -27,8 +27,15 @@ def ws_on_open(ws):
         "version": 1
     }))
 
+
     # Handshake completed
     print("### Handshake request completed ###") 
+
+    ws.send(encode_json({
+        "type":1,        
+        "target" : "SendMessage",
+        "arguments" : ["PythonClient", "HelloWorld!", True ] 
+        }))
 
 if __name__ == "__main__":     
     websocket.enableTrace(True)
