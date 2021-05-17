@@ -5,12 +5,11 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Security.Claims;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+
 using vsg.ApiAuth.JWT.Business.Auth;
 using vsg.ApiAuth.JWT.Services;
 using vsg.ApiAuth.JWT.Services.Interfaces;

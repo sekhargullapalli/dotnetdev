@@ -19,6 +19,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 using vsg.ApiAuth.JWT.Business.Auth;
+using vsg.ApiAuth.JWT.Services.Interfaces;
+using vsg.ApiAuth.JWT.Services;
 
 namespace vsg.ApiAuth.JWT
 {
@@ -67,6 +69,7 @@ namespace vsg.ApiAuth.JWT
 
             services.AddSingleton<IJwtAuthManager, JwtAuthManager>();
             services.AddHostedService<JwtRefreshTokenCache>();
+            services.AddScoped<IUserService, UserService>();
 
 
             services.AddControllers();
@@ -79,8 +82,8 @@ namespace vsg.ApiAuth.JWT
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "vsg.ApiAuth.JWT v1"));
+                //app.UseSwagger();
+                //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "vsg.ApiAuth.JWT v1"));
             }
 
             app.UseHttpsRedirection();
