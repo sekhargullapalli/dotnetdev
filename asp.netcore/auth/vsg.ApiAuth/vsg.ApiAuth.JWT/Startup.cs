@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+using vsg.ApiAuth.JWT.Business;
+
 namespace vsg.ApiAuth.JWT
 {
     public class Startup
@@ -24,9 +26,10 @@ namespace vsg.ApiAuth.JWT
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var jwtTokenConfig = Configuration.GetSection("jwtTokenConfig").Get<JwtTokenConfig>();
+
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
