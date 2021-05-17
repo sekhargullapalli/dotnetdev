@@ -1,0 +1,3 @@
+﻿JWT Auth in ASP.NET Core
+Changhui Xu
+https://codeburst.io/jwt-auth-in-asp-net-core-148fb72bed03
