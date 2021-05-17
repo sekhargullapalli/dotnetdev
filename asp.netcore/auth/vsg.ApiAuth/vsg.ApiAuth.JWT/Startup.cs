@@ -18,7 +18,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-using vsg.ApiAuth.JWT.Business;
+using vsg.ApiAuth.JWT.Business.Auth;
 
 namespace vsg.ApiAuth.JWT
 {
