@@ -21,7 +21,8 @@ namespace vsg.ApiAuth.JWT
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseStartup<Startup>()
+                    .UseUrls("http://127.0.0.1:5001");
                 });
     }
 }

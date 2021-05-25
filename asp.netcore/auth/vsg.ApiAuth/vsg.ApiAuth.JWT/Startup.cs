@@ -44,7 +44,7 @@ namespace vsg.ApiAuth.JWT
                 x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(x=> {
 
-                x.RequireHttpsMetadata = true; /*authentication requires HTTPS for the metadata address or authority*/
+                //x.RequireHttpsMetadata = true; /*authentication requires HTTPS for the metadata address or authority*/
                 //the default value is true,
                 //which saves the JWT access token in the current HttpContext,
                 //so that we can retrieve it using the method
@@ -86,7 +86,7 @@ namespace vsg.ApiAuth.JWT
                 //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "vsg.ApiAuth.JWT v1"));
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
             app.UseAuthentication();
